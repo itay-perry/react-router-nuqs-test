@@ -1,0 +1,114 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.current-path {
+  color: #888;
+  margin: 0.5rem 0;
+}
+
+.current-path code {
+  background: #1a1a1a;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: #00d9ff;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.main-nav a {
+  padding: 0.5rem 1rem;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.main-nav a:hover {
+  background: #555;
+}
+
+.page {
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.page-a {
+  background: linear-gradient(135deg, #1a4a3a 0%, #0d2821 100%);
+  border: 1px solid #2d7a5a;
+}
+
+.page-b {
+  background: linear-gradient(135deg, #3a1a4a 0%, #21082d 100%);
+  border: 1px solid #5a2d7a;
+}
+
+.page h1 {
+  margin-top: 0;
+  font-size: 2.5rem;
+}
+
+.count-display {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+  color: #fff;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.button-group button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #646cff;
+  color: white;
+  transition: background 0.2s;
+}
+
+.button-group button:hover {
+  background: #535bf2;
+}
+
+.nav {
+  margin-top: 2rem;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #00d9ff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.nav a:hover {
+  background: #00b8d9;
+}
