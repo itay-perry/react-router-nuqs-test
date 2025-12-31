@@ -18,8 +18,8 @@ export default function App() {
   return (
     <div className="app">
       <header>
-        <h2>Two Sources of Truth 🔥</h2>
-        <table style={{ margin: "10px 0", borderCollapse: "collapse" }}>
+        <h2>✨ Test browser/nuqs behaviour ✨</h2>
+        <table style={{ margin: "10px auto", borderCollapse: "collapse" }}>
           <tbody>
             <tr>
               <td style={{ padding: "5px 10px", border: "1px solid #ccc" }}>React Router says:</td>
