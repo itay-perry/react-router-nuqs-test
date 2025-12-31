@@ -13,7 +13,6 @@ const router = createBrowserRouter([
     element: (
       <NuqsAdapter>
         <App />
-        <p>Check</p>
       </NuqsAdapter>
     ),
     children: [
