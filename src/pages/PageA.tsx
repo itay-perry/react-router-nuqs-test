@@ -1,17 +1,28 @@
 import { useQueryState, parseAsInteger } from "nuqs";
-import { Link } from "react-router-dom";
+import { useEffect, useMemo } from "react";
 
 export function PageA() {
   const [count] = useQueryState("count", parseAsInteger.withDefault(0));
 
-  // THE BUG: PageA can render with PageB's count value during navigation!
-  console.log("PageA render:", { count, "window.location.pathname": window.location.pathname });
+  const isCorrect = useMemo(() => {
+    const correct = count === 1;
+    console.log("PageA render:", { 
+      count, 
+      expected: 1, 
+      isCorrect: correct ? "✅" : "❌ BUG - seeing Page B's value!" 
+    });
+    return correct;
+  }, [count]);
+
+  useEffect(() => {
+    return () => console.log(">>> PageA UNMOUNTING <<<");
+  }, []);
 
   return (
-    <div style={{ padding: 20, background: "#e8f5e9" }}>
-      <h1>Page A</h1>
-      <p>Count from URL: <strong>{count}</strong></p>
-      <Link to="/B?count=2">Go to Page B (count=2)</Link>
+    <div style={{ padding: 20, background: isCorrect ? "#e8f5e9" : "#ffcdd2" }}>
+      <h1>Page A {isCorrect ? "✅" : "❌"}</h1>
+      <p>Count from URL (via nuqs): <strong style={{ fontSize: 24 }}>{count}</strong></p>
+      <p>Expected: <strong>1</strong></p>
     </div>
   );
 }
