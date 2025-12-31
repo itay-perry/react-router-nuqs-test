@@ -19,7 +19,7 @@ export function PageA() {
   }, []);
 
   return (
-    <div style={{ padding: 20, background: isCorrect ? "#e8f5e9" : "#ffcdd2" }}>
+    <div style={{ padding: 20 }}>
       <h1>Page A {isCorrect ? "✅" : "❌"}</h1>
       <p>Count from URL (via nuqs): <strong style={{ fontSize: 24 }}>{count}</strong></p>
       <p>Expected: <strong>1</strong></p>
