@@ -18,20 +18,48 @@ export default function App() {
   return (
     <div className="app">
       <header>
-        <h2>✨ Test browser/nuqs behaviour ✨</h2>
+        <h2>✨✨ Test browser/nuqs behaviour ✨✨</h2>
         <table style={{ margin: "10px auto", borderCollapse: "collapse" }}>
           <tbody>
             <tr>
-              <td style={{ padding: "5px 10px", border: "1px solid #ccc" }}>React Router says:</td>
-              <td style={{ padding: "5px 10px", border: "1px solid #ccc", fontFamily: "monospace" }}>{reactRouterPath}</td>
+              <td style={{ padding: "5px 10px", border: "1px solid #ccc" }}>
+                React Router says:
+              </td>
+              <td
+                style={{
+                  padding: "5px 10px",
+                  border: "1px solid #ccc",
+                  fontFamily: "monospace",
+                }}
+              >
+                {reactRouterPath}
+              </td>
             </tr>
             <tr>
-              <td style={{ padding: "5px 10px", border: "1px solid #ccc" }}>Browser says:</td>
-              <td style={{ padding: "5px 10px", border: "1px solid #ccc", fontFamily: "monospace" }}>{browserPath}</td>
+              <td style={{ padding: "5px 10px", border: "1px solid #ccc" }}>
+                Browser says:
+              </td>
+              <td
+                style={{
+                  padding: "5px 10px",
+                  border: "1px solid #ccc",
+                  fontFamily: "monospace",
+                }}
+              >
+                {browserPath}
+              </td>
             </tr>
             <tr>
-              <td style={{ padding: "5px 10px", border: "1px solid #ccc" }}>In sync?</td>
-              <td style={{ padding: "5px 10px", border: "1px solid #ccc", background: isInSync ? "#c8e6c9" : "#ffcdd2" }}>
+              <td style={{ padding: "5px 10px", border: "1px solid #ccc" }}>
+                In sync?
+              </td>
+              <td
+                style={{
+                  padding: "5px 10px",
+                  border: "1px solid #ccc",
+                  background: isInSync ? "#c8e6c9" : "#ffcdd2",
+                }}
+              >
                 {isInSync ? "✅ YES" : "❌ NO - BUG!"}
               </td>
             </tr>
